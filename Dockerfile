@@ -1,7 +1,8 @@
 FROM rocker/r-ver:3.6.0
 MAINTAINER "Jacob Hepkema" github.com/jacobhepkema
 
-RUN install2.r --error optparse \
+RUN install2.r --error BiocManager \
+  optparse \
   stringr \
   ggplot2 \
   dplyr \
