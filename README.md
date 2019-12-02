@@ -1,2 +1,2 @@
 # scanem-R
-R docker container for scanem
+R docker/singularity container for scanem
