@@ -7,14 +7,18 @@ RUN apt-get update \
   && apt-get install -y --no-install-recommends \
     lbzip2 \
     libhdf4-alt-dev \
-    libhdf5-dev 
+    libhdf5-dev \
+    libxml-parser-perl
 
 RUN install2.r --error BiocManager \
   optparse \
+  hashmap \
+  reshape2 \
+  pracma \
   stringr \
   ggplot2 \
   dplyr \
   viridis \
-  && R -e "BiocManager::install(c('rhdf5', 'pheatmap'), update=FALSE, ask=FALSE)"
+  && R -e "BiocManager::install(c('rhdf5', 'pheatmap', 'Biostrings', 'ggseqlogo', 'ggrepel'), update=FALSE, ask=FALSE)"
   
 RUN R --version | grep -m1 ""
