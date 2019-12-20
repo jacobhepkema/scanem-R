@@ -6,7 +6,7 @@ From: rocker/r-ver:3.6.0
     Version v0.1
   
 %post
-    apt-get update && apt-get install -y --no-install-recommends lbzip2 libhdf4-alt-dev libhdf5-dev && install2.r --error BiocManager optparse stringr ggplot2 dplyr viridis && R -e "BiocManager::install(c('rhdf5', 'pheatmap'), update=FALSE, ask=FALSE)"
+    apt-get update && apt-get install -y --no-install-recommends lbzip2 libhdf4-alt-dev libhdf5-dev libxml-parser-perl && install2.r --error BiocManager optparse stringr pracma hashmap reshape2 ggplot2 dplyr viridis && R -e "BiocManager::install(c('rhdf5', 'pheatmap', 'Biostrings', 'ggseqlogo', 'ggrepel'), update=FALSE, ask=FALSE)"
 
 # smoke test
 R --version
