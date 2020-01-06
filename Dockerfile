@@ -11,6 +11,8 @@ RUN apt-get update \
     libxml-parser-perl
 
 RUN install2.r --error BiocManager \
+  tools \
+  RColorBrewer \
   optparse \
   hashmap \
   reshape2 \
@@ -19,6 +21,8 @@ RUN install2.r --error BiocManager \
   ggplot2 \
   dplyr \
   viridis \
-  && R -e "BiocManager::install(c('rhdf5', 'pheatmap', 'Biostrings', 'ggseqlogo', 'ggrepel'), update=FALSE, ask=FALSE)"
+  grid \
+  gridExtra \
+  && R -e "BiocManager::install(c('rhdf5', 'pheatmap', 'Biostrings', 'ggseqlogo', 'ggrepel', 'DelayedMatrixStats'), update=FALSE, ask=FALSE)"
   
 RUN R --version | grep -m1 ""
