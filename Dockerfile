@@ -5,6 +5,7 @@ MAINTAINER "Jacob Hepkema" github.com/jacobhepkema
 
 RUN apt-get update \
   && apt-get install -y --no-install-recommends \
+    procps \
     lbzip2 \
     libhdf4-alt-dev \
     libhdf5-dev \
