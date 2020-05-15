@@ -22,6 +22,8 @@ RUN install2.r --error BiocManager \
   dplyr \
   viridis \
   gridExtra \
-  && R -e "BiocManager::install(c('rhdf5', 'pheatmap', 'Biostrings', 'ggseqlogo', 'ggrepel', 'DelayedMatrixStats'), update=FALSE, ask=FALSE)"
+  igraph \
+  ade4 \
+  && R -e "BiocManager::install(c('rhdf5', 'pheatmap', 'Biostrings', 'ggseqlogo', 'ggrepel', 'DelayedMatrixStats', 'xtable'), update=FALSE, ask=FALSE)"
   
 RUN R --version | grep -m1 ""
