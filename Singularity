@@ -1,5 +1,5 @@
 Bootstrap: docker
-From: rocker/r-ver:3.6.3
+From: rocker/r-ver:3.6.0
 
 %labels
     Maintainer @jacobhepkema
